@@ -1,0 +1,29 @@
+{
+  "name": "@dalongrong/opendistro-driver",
+  "main": "index.js",
+  "description": "Cube.js opendistro elasticsearch database driver",
+  "author": "rongfengliang",
+  "version": "1.0.0",
+  "public": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rongfengliang/cubejs-opendistro-driver"
+  },
+  "engines": {
+    "node": ">=10.8.0"
+  },
+  "dependencies": {
+    "@cubejs-backend/query-orchestrator": "^0.26.69",
+    "@cubejs-backend/schema-compiler": "^0.26.69",
+    "@elastic/elasticsearch": "^7.12.0",
+    "ramda": "^0.27.1",
+    "sqlstring": "^2.3.2"
+  },
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "p": "yarn publish --access public"
+  }
+}
