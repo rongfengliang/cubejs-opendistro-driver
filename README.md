@@ -2,7 +2,7 @@
 
 ## Some notes
 
->  better user opendistro-for-elasticsearch:1.13.0
+>  better use opendistro-for-elasticsearch:1.13.0
 
 * unixTimestampSql 
 
