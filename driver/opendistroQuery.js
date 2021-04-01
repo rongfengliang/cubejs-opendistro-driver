@@ -13,7 +13,7 @@ const GRANULARITY_TO_INTERVAL = {
 
 class OpendistroQueryFilter extends BaseFilter {
   likeIgnoreCase(column, not, param) {
-    return `${not ? ' NOT' : ''} MATCH(${column}, ${this.allocateParam(param)}, 'fuzziness=AUTO:1,5')`;
+    return `${not ? ' NOT' : ''} MATCH_QUERY(${column}, ${this.allocateParam(param)})`;
   }
 }
 
