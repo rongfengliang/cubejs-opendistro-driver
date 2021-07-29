@@ -1,15 +1,18 @@
 const { BaseQuery,BaseFilter } = require('@cubejs-backend/schema-compiler');
 const  R  =require('ramda');
 
+
 const GRANULARITY_TO_INTERVAL = {
-  day: date => `DATE_TRUNC('day', ${date}::datetime)`,
-  week: date => `DATE_TRUNC('week', ${date}::datetime)`,
-  hour: date => `DATE_TRUNC('hour', ${date}::datetime)`,
-  minute: date => `DATE_TRUNC('minute', ${date}::datetime)`,
-  second: date => `DATE_TRUNC('second', ${date}::datetime)`,
-  month: date => `DATE_TRUNC('month', ${date}::datetime)`,
-  year: date => `DATE_TRUNC('year', ${date}::datetime)`
+  day: (date) => `DATE_FORMAT(${date}, 'yyyy-MM-dd')`,
+  // eslint-disable-next-line no-unused-vars,@typescript-eslint/no-unused-vars
+  week: (date) => `Week(${date})`, // TODO
+  hour: (date) => `DATE_FORMAT(${date}, 'yyyy-MM-dd HH')`,
+  minute: (date) => `DATE_FORMAT(${date}, 'yyyy-MM-dd HH:mm')`,
+  second: (date) => `DATE_FORMAT(${date}, 'yyyy-MM-dd HH:mm:ss')`,
+  month: (date) => `DATE_FORMAT(${date}, 'yyyy-MM-01')`,
+  year: (date) => `DATE_FORMAT(${date}, 'yyyy-01-01')`
 };
+
 
 class OpendistroQueryFilter extends BaseFilter {
   likeIgnoreCase(column, not, param) {
