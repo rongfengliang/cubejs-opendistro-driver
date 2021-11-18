@@ -1,9 +1,9 @@
 {
-  "name": "@dalongrong/opendistro-driver",
+  "name": "opendistro-cubejs-driver",
   "main": "index.js",
   "description": "Cube.js opendistro elasticsearch database driver",
   "author": "rongfengliang",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "public": true,
   "repository": {
     "type": "git",

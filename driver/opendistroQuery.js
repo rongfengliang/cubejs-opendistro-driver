@@ -34,7 +34,7 @@ module.exports = class OpendistroQuery extends BaseQuery {
   }
 
   dateTimeCast(value) {
-    return `${value}`; // TODO
+    return `date(${value})`; // TODO
   }
 
   subtractInterval(date, interval) {
